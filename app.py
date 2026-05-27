@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, redirect
 from extensions import db
 from models import Todo
+from waitress import serve
 
 def create_app():
     app = Flask(__name__)
@@ -77,5 +78,6 @@ def create_app():
 app = create_app()
 
 if __name__=="__main__":
-    app.run(debug=True,port=5000)
+    # app.run(debug=True,port=5000)
+    serve(app, host="0.0.0.0", port=8000)
 

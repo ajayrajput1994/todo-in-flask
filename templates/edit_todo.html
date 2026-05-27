@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Todo Edit
+{% endblock %}
+{% block body %}
+<div class="row mt-3">
+  <div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <form action="/edit-todo/{{todo.sno}}" method="POST">
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" value="{{todo.title}}">
+          </div>
+          <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea class="form-control" name="desc" id="desc" rows="3">{{todo.desc}}</textarea>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-outline-dark btn-sm">Submit</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

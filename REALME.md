@@ -1,6 +1,6 @@
-#set virtual inviroment
 go live: https://todo-in-flask.onrender.com
 
+#set virtual inviroment
 1. pip install virtualenv
 2. virtualenv env
    if error:
